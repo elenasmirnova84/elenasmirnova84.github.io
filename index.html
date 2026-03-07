@@ -156,10 +156,11 @@ en:{
     conf:['Working Group for Peace and Conflict Research (AFK) – Colloquium 2026, Leipzig. <em>"Beyond Security: Feminist and Decolonial Visions of Peace in the Context of the Russia–Ukraine War."</em>']},
   med:{h:'Media & Public Engagement',
     rl:'Freelance Journalist & Radio Producer',ro:'Radio Agora 105.5 · Radio Orange 94.0 · 2015–2025',
-    ri:['Conceptualisation, production and moderation of the bilingual programme <a href="https://cba.media/podcast/russischestunde" target="_blank">Russische Stunde – Русский час</a>',
-      'Production of the feminist radio programme <a href="https://cba.media/podcast/subject-woman" target="_blank">Subject Woman – Women\'s Perspectives from Around the World</a>',
-      'Member of the editorial team <a href="https://noso.at/" target="_blank">Global Dialogues – Woman on Air</a>',
-      'Focus: feminism, authoritarianism, transnational dialogue, diaspora debates'],
+    ri:[
+      {title:'Russische Stunde – Русский час',desc:'Bilingual programme — conceptualisation, production and moderation',url:'https://cba.media/podcast/russischestunde'},
+      {title:'Subject Woman',desc:'Feminist radio programme — Women\'s Perspectives from Around the World',url:'https://cba.media/podcast/subject-woman'},
+      {title:'Global Dialogues – Woman on Air',desc:'Member of the editorial team',url:'https://noso.at/'}],
+    focus:'Focus: feminism, authoritarianism, transnational dialogue, diaspora debates',
     cl:'Civil Society Engagement',ct:'Active involvement in civil society networks addressing peace policy, gender equality and democratic resilience, with a focus on Eastern Europe and EU contexts. Strategic networking across academia, civil society and policy communities. Regular lectures, panel contributions and moderation on democratic resilience, gender equality, antimilitarism and transformation processes in Europe.'},
   sk:{h:'Skills',ll:'Languages',langs:[['Russian','Native'],['German','Fluent'],['English','Fluent'],['Ukrainian','Basic']],
     tl:'Tools & Methods',tools:['MAXQDA','QGIS','MS Office (Advanced)','MS Teams / SharePoint','AI Research Tools','Audio/Video Editing','Qualitative Research','Critical Discourse Analysis'],
@@ -208,10 +209,11 @@ de:{
     conf:['Arbeitsgemeinschaft für Friedens- und Konfliktforschung (AFK) – Kolloquium 2026, Leipzig. <em>„Jenseits der Sicherheit: Feministische und dekoloniale Friedensvisionen im Kontext des Russland-Ukraine-Krieges."</em>']},
   med:{h:'Medien & Öffentlichkeitsarbeit',
     rl:'Freiberufliche Journalistin & Radiomacherin',ro:'Radio Agora 105.5 · Radio Orange 94.0 · 2015–2025',
-    ri:['Konzeption, Produktion und Moderation der zweisprachigen Sendung <a href="https://cba.media/podcast/russischestunde" target="_blank">Russische Stunde – Русский час</a>',
-      'Produktion der feministischen Sendung <a href="https://cba.media/podcast/subject-woman" target="_blank">Subject Woman – Frauenperspektiven aus aller Welt</a>',
-      'Mitglied der Redaktionsgruppe <a href="https://noso.at/" target="_blank">Globale Dialoge – Woman on Air</a>',
-      'Schwerpunkte: Feminismus, Autoritarismus, transnationale Dialoge, Diaspora-Debatten'],
+    ri:[
+      {title:'Russische Stunde – Русский час',desc:'Zweisprachige Sendung — Konzeption, Produktion und Moderation',url:'https://cba.media/podcast/russischestunde'},
+      {title:'Subject Woman – Frauenperspektiven aus aller Welt',desc:'Feministische Radiosendung — Produktion',url:'https://cba.media/podcast/subject-woman'},
+      {title:'Globale Dialoge – Woman on Air',desc:'Mitglied der Redaktionsgruppe',url:'https://noso.at/'}],
+    focus:'Schwerpunkte: Feminismus, Autoritarismus, transnationale Dialoge, Diaspora-Debatten',
     cl:'Zivilgesellschaftliches Engagement',ct:'Aktive Mitwirkung in zivilgesellschaftlichen Netzwerken zu Friedenspolitik, Geschlechtergerechtigkeit und demokratischer Resilienz mit Schwerpunkt auf Osteuropa und EU-Kontexten. Strategische Vernetzung mit Akteur*innen aus Wissenschaft, Zivilgesellschaft und Politik. Regelmäßige Vorträge, Panelbeiträge und Moderationen zu demokratischer Resilienz, Geschlechtergerechtigkeit, Antimilitarismus und Transformationsprozessen in Europa.'},
   sk:{h:'Kompetenzen',ll:'Sprachen',langs:[['Russisch','Muttersprache'],['Deutsch','Fließend'],['Englisch','Fließend'],['Ukrainisch','Grundkenntnisse']],
     tl:'Tools & Methoden',tools:['MAXQDA','QGIS','MS Office (Fortgeschritten)','MS Teams / SharePoint','KI-Recherche-Tools','Audio-/Videobearbeitung','Qualitative Forschung','Kritische Diskursanalyse'],
@@ -266,8 +268,8 @@ function render(){
   document.getElementById('med-h').textContent=d.med.h;
   const m=d.med;
   document.getElementById('med-c').innerHTML=
-    `<div class="card"><div class="card-lbl">${m.rl}</div><div class="card-inst" style="margin-bottom:0.6rem">${m.ro}</div><ul style="padding-left:1.1rem">${m.ri.map(i=>`<li style="font-size:0.88rem;color:var(--txtl);margin-bottom:0.25rem">${i}</li>`).join('')}</ul></div>`+
-    `<div class="card"><div class="card-lbl">${m.cl}</div><p style="font-size:0.88rem;color:var(--txtl)">${m.ct}</p></div>`;
+    `<div class="card"><div class="card-lbl">${m.rl}</div><div class="card-inst" style="margin-bottom:0.9rem">${m.ro}</div><div class="skills-grid">${m.ri.map(p=>`<div class="sc"><div class="sc-title"><a href="${p.url}" target="_blank" style="color:var(--p);text-decoration:none">${p.title}</a></div><p style="font-size:0.85rem;color:var(--txtl);margin-top:0.4rem">${p.desc}</p></div>`).join('')}</div><p style="font-size:0.82rem;color:var(--txtl);margin-top:0.9rem;font-style:italic">${m.focus}</p></div>`+
+    `<div class="card" style="margin-top:1.3rem"><div class="card-lbl">${m.cl}</div><p style="font-size:0.88rem;color:var(--txtl)">${m.ct}</p></div>`;
   document.getElementById('sk-h').textContent=d.sk.h;
   const s=d.sk;
   document.getElementById('sk-c').innerHTML=`<div class="skills-grid">
