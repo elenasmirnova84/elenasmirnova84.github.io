@@ -38,7 +38,7 @@ section{padding:3.8rem 2rem;}
 section.alt{background:var(--pb);}
 .si{max-width:900px;margin:0 auto;}
 .sh{font-family:Georgia,'Times New Roman',serif;font-size:1.75rem;color:var(--p);margin-bottom:1.8rem;padding-bottom:0.6rem;border-bottom:2.5px solid var(--p);}
-.about-txt{font-size:0.97rem;max-width:820px;}
+.about-txt{font-size:0.97rem;max-width:820px;}.about-txt p{margin-bottom:0.9rem;}.about-txt p:last-child{margin-bottom:0;}
 .card{background:#fff;border-radius:10px;padding:1.4rem 1.8rem;border-left:4px solid var(--p);margin-bottom:1.3rem;box-shadow:0 2px 10px rgba(43,50,53,0.08);}
 .card-lbl{font-size:0.72rem;text-transform:uppercase;letter-spacing:0.09em;color:var(--p);font-weight:700;margin-bottom:0.35rem;}
 .card-title{font-family:Georgia,'Times New Roman',serif;font-size:1.1rem;font-weight:600;margin-bottom:0.35rem;}
@@ -102,9 +102,10 @@ footer{text-align:center;padding:1.5rem;font-size:0.78rem;color:var(--txtl);bord
   </div>
 </section>
 
-<section id="about"><div class="si"><h2 class="sh" id="about-h"></h2><p class="about-txt" id="about-txt"></p></div></section>
+<section id="about"><div class="si"><h2 class="sh" id="about-h"></h2><div class="about-txt" id="about-txt"></div></div></section>
 <section id="research" class="alt"><div class="si"><h2 class="sh" id="res-h"></h2><div id="res-c"></div></div></section>
-<section id="cv"><div class="si"><h2 class="sh" id="cv-h"></h2><div id="cv-c"></div></div></section>
+<section id="experience"><div class="si"><h2 class="sh" id="exp-h"></h2><div id="exp-c"></div></div></section>
+<section id="education" class="alt"><div class="si"><h2 class="sh" id="edu-h"></h2><div id="edu-c"></div></div></section>
 <section id="publications" class="alt"><div class="si"><h2 class="sh" id="pub-h"></h2><div id="pub-c"></div></div></section>
 <section id="media"><div class="si"><h2 class="sh" id="med-h"></h2><div id="med-c"></div></div></section>
 <section id="skills" class="alt"><div class="si"><h2 class="sh" id="sk-h"></h2><div id="sk-c"></div></div></section>
@@ -114,15 +115,15 @@ footer{text-align:center;padding:1.5rem;font-size:0.78rem;color:var(--txtl);bord
 <script>
 const C={
 en:{
-  nav:['About','Research','CV','Publications','Media','Contact'],
-  ids:['about','research','cv','publications','media','contact'],
+  nav:['About','Research','Experience','Education','Publications','Media','Contact'],
+  ids:['about','research','experience','education','publications','media','contact'],
   sub:'Doctoral Researcher · Project Manager · Feminist Peace Researcher',
   inst:'University of Vienna · Faculty of Social Sciences',
-  about:{h:'About',t:'I am a project manager and researcher with more than 15 years of experience in designing, managing and evaluating international programmes in development cooperation, humanitarian assistance, and research and consulting projects. My work focuses on peace policy, gender equality, democratic resilience and decolonial perspectives on societal transformation, with a regional focus on Eastern Europe, the Western Balkans, the South Caucasus and Central Asia. I have extensive experience managing publicly funded projects (EU institutions, Austrian Development Agency, ministries), coordinating international consortia, and assuming full budgetary and contractual responsibility. I also bring academic expertise in International Development, with a focus on feminist and decolonial peace research, alongside experience in university teaching and academic publishing.'},
+  about:{h:'About',t:['I am a project manager and researcher with more than 15 years of experience in designing, managing and evaluating international programmes in development cooperation, humanitarian assistance, and research and consulting projects.','My work focuses on peace policy, gender equality, democratic resilience and decolonial perspectives on societal transformation. Geographically, my work concentrates on Eastern Europe, the Western Balkans, the South Caucasus and Central Asia.','I have extensive experience managing publicly funded projects (EU institutions and agencies, Austrian Development Agency, ministries), developing and coordinating international consortia, and assuming full budgetary and contractual responsibility. My work combines strategic project management with in-depth political and governance analysis, particularly in fragile and authoritarian contexts.','In addition, I bring academic expertise in International Development, with a focus on feminist and decolonial peace research, as well as experience in university teaching and academic publishing.']},
   res:{h:'Research & Teaching',
     diss:{lbl:'Doctoral Dissertation',title:'Antimilitarism and Decolonisation: Civil Society Actors in Russia and Ukraine between War and Peace',inst:'University of Vienna, Faculty of Social Sciences · Since October 2025',focus:['Feminist peace & conflict research','Decolonial theory','Civil society resistance & the Russia–Ukraine war','Critical discourse analysis & qualitative methods']},
     teach:[{lbl:'Visiting Lecturer',title:'Peace from Below: Feminist Visions and Practices Against the War in Ukraine and Russia',inst:'Alpen-Adria University Klagenfurt · Summer Semester 2026',note:'Course 560.102 (26S) — Independent design and teaching; supervision of student research projects.'}]},
-  cv:{h:'CV',el:'Professional Experience',edl:'Education',fw:'Further Education & Training',
+  experience:{h:'Experience',
     exp:[
       {r:'Visiting Lecturer',o:'Alpen-Adria University Klagenfurt',p:'Summer Semester 2026',d:'"Peace from Below. Feminist Visions and Practices Against the War in Ukraine and Russia" — Independent design and teaching; supervision of student research projects.'},
       {r:'Project Manager & Gender Equality Officer',o:'Vienna Institute for International Economic Studies (wiiw), Vienna',p:'Oct 2024 – Mar 2026',d:'Acquisition and management of research and cooperation projects in Eastern and South-Eastern Europe. Full project cycle management; cooperation with EU institutions, ministries and international partners. Co-responsibility for institutional Gender Equality Plan implementation and monitoring.'},
@@ -133,7 +134,8 @@ en:{
       {r:'Project Associate',o:'Kohl & Partner GmbH, Villach',p:'Apr 2009 – Feb 2017',d:'International tourism and regional development consulting; market analysis and project development.'},
       {r:'Environmental Consultant',o:'Energoconsulting, Moscow',p:'Jun 2008 – Sep 2008',d:'Consulting in quality and environmental management.'},
       {r:'Consultant & Auditor for Management Systems',o:'Ural Interregional Certification Centre, Ekaterinburg',p:'Sep 2006 – May 2008',d:'Consulting in quality and environmental management; implementation of ISO 14001 & OHSAS 18001; internal and external environmental audits.'}
-    ],
+    ]},
+  education:{h:'Education',edl:'Academic Degrees',fw:'Further Education & Training',
     edu:[
       {r:'Doctoral Programme in Social Sciences: Development Studies (PhD)',o:'University of Vienna',p:'Since October 2025',d:'"Antimilitarism and Decolonisation: Civil Society Actors in Russia and Ukraine between War and Peace"'},
       {r:'MSc in Geography and Regional Research (Geographical Systems Sciences)',o:'Alpen-Adria University Klagenfurt',p:'Graduated 2018',d:'With distinction'},
@@ -164,15 +166,15 @@ en:{
   ft:'© 2026 Elena Smirnova, MSc · University of Vienna'
 },
 de:{
-  nav:['Über mich','Forschung','Lebenslauf','Publikationen','Medien','Kontakt'],
-  ids:['about','research','cv','publications','media','contact'],
+  nav:['Über mich','Forschung','Berufserfahrung','Ausbildung','Publikationen','Medien','Kontakt'],
+  ids:['about','research','experience','education','publications','media','contact'],
   sub:'Doktorandin · Projektmanagerin · Feministische Friedensforscherin',
   inst:'Universität Wien · Fakultät für Sozialwissenschaften',
   about:{h:'Über mich',t:'Ich bin Projektmanagerin und Forscherin mit über 15 Jahren Erfahrung in der Konzeption, Steuerung und Evaluation internationaler Programme in Entwicklungszusammenarbeit, humanitärer Hilfe, europäischer Politikberatung sowie in Forschungs- und Consultingprojekten. Inhaltlich arbeite ich zu Fragen von Friedenspolitik, Geschlechtergerechtigkeit, demokratischer Resilienz und dekolonialen Perspektiven auf gesellschaftliche Transformationsprozesse – mit regionalem Schwerpunkt auf Osteuropa, dem Westbalkan, dem Südkaukasus und Zentralasien. Ich verfüge über umfassende Erfahrung im Management öffentlich geförderter Projekte (EU-Institutionen, ADA, Ministerien), in der Koordination internationaler Konsortien sowie in Budget- und Vertragsverantwortung. Ergänzend bringe ich wissenschaftliche Expertise in feministischer und dekolonialer Friedensforschung sowie Erfahrung in universitärer Lehre und Publikation mit.'},
   res:{h:'Forschung & Lehre',
     diss:{lbl:'Dissertation',title:'Antimilitarismus und Dekolonisierung: Zivilgesellschaftliche Akteur*innen in Russland und der Ukraine zwischen Krieg und Frieden',inst:'Universität Wien, Institut für Internationale Entwicklung · Seit Oktober 2025',focus:['Feministische Friedens- und Konfliktforschung','Dekoloniale Theorie','Zivilgesellschaftlicher Widerstand im Russland-Ukraine-Krieg','Kritische Diskursanalyse & qualitative Methoden']},
     teach:[{lbl:'Gastlektorin',title:'Frieden von unten. Feministische Visionen und Praktiken gegen den Krieg in der Ukraine und in Russland',inst:'Alpen-Adria Universität Klagenfurt · Sommersemester 2026',note:'Lehrveranstaltung 560.102 (26S) — Eigenständige Konzeption und Durchführung; Betreuung studentischer Arbeiten.'}]},
-  cv:{h:'Lebenslauf',el:'Berufserfahrung',edl:'Ausbildung',fw:'Weiterbildung',
+  experience:{h:'Berufserfahrung',
     exp:[
       {r:'Gastprofessorin/Lektorin',o:'Alpen-Adria Universität Klagenfurt',p:'Sommersemester 2026',d:'„Frieden von unten. Feministische Visionen und Praktiken gegen den Krieg in der Ukraine und in Russland" — Eigenständige Konzeption und Durchführung; Betreuung studentischer Arbeiten.'},
       {r:'Projektmanagerin & Gender Equality Officer',o:'Wiener Institut für Internationale Wirtschaftsvergleiche (wiiw), Wien',p:'Okt 2024 – Mär 2026',d:'Akquise und Steuerung von Forschungs- und Kooperationsprojekten in Ost- und Südosteuropa. Gesamtverantwortung über den Projektzyklus; Zusammenarbeit mit EU-Institutionen, Ministerien und internationalen Partnern. Mitverantwortung für den Gender Equality Plan und Monitoring geschlechterspezifischer Kennzahlen.'},
@@ -183,7 +185,8 @@ de:{
       {r:'Projektmitarbeiterin',o:'Kohl & Partner GmbH, Villach',p:'Apr 2009 – Feb 2017',d:'Internationale Tourismus- und Regionalentwicklungsberatung; Marktanalyse und Projektentwicklung.'},
       {r:'Umweltexpertin',o:'Energoconsulting, Moskau',p:'Jun 2008 – Sep 2008',d:'Unternehmensberatung im Bereich Qualitäts- und Umweltmanagement.'},
       {r:'Beraterin und Auditorin für Managementsysteme',o:'Urales Interregionales Zertifizierungszentrum, Jekaterinburg',p:'Sep 2006 – Mai 2008',d:'Beratung im Qualitäts- und Umweltmanagement; Implementierung von ISO 14001 & OHSAS 18001; interne und externe Umweltaudits.'}
-    ],
+    ]},
+  education:{h:'Ausbildung',edl:'Akademische Abschlüsse',fw:'Weiterbildung',
     edu:[
       {r:'Doktoratsstudium Internationale Entwicklung (PhD)',o:'Universität Wien',p:'Seit Oktober 2025',d:'„Antimilitarismus und Dekolonisierung: Zivilgesellschaftliche Akteur*innen in Russland und der Ukraine zwischen Krieg und Frieden"'},
       {r:'MSc Geographie und Regionalforschung – Geographische Systemwissenschaften',o:'Alpen-Adria Universität Klagenfurt',p:'Abschluss 2018',d:'Mit ausgezeichnetem Erfolg'},
@@ -233,18 +236,21 @@ function render(){
   document.getElementById('h-sub').textContent=d.sub;
   document.getElementById('h-inst').textContent=d.inst;
   document.getElementById('about-h').textContent=d.about.h;
-  document.getElementById('about-txt').textContent=d.about.t;
+  const aboutEl=document.getElementById('about-txt');
+  const aboutT=d.about.t;
+  aboutEl.innerHTML=Array.isArray(aboutT)?aboutT.map(p=>`<p>${p}</p>`).join(''):`<p>${aboutT}</p>`;
   document.getElementById('res-h').textContent=d.res.h;
   const r=d.res;
   document.getElementById('res-c').innerHTML=
     `<div class="card"><div class="card-lbl">${r.diss.lbl}</div><div class="card-title">${r.diss.title}</div><div class="card-inst">${r.diss.inst}</div><ul class="focus-tags">${r.diss.focus.map(f=>`<li>${f}</li>`).join('')}</ul></div>`+
     r.teach.map(t=>`<div class="card"><div class="card-lbl">${t.lbl}</div><div class="card-title">${t.title}</div><div class="card-inst">${t.inst}</div><p style="font-size:0.85rem;color:var(--txtl)">${t.note}</p></div>`).join('');
-  document.getElementById('cv-h').textContent=d.cv.h;
-  const cv=d.cv;
-  document.getElementById('cv-c').innerHTML=
-    `<p class="sublbl">${cv.el}</p>${tlHTML(cv.exp)}`+
-    `<p class="sublbl">${cv.edl}</p>${tlHTML(cv.edu)}`+
-    `<p class="sublbl">${cv.fw}</p>${tlHTML(cv.fur)}`;
+  document.getElementById('exp-h').textContent=d.experience.h;
+  document.getElementById('exp-c').innerHTML=tlHTML(d.experience.exp);
+  document.getElementById('edu-h').textContent=d.education.h;
+  const ed=d.education;
+  document.getElementById('edu-c').innerHTML=
+    `<p class="sublbl">${ed.edl}</p>${tlHTML(ed.edu)}`+
+    `<p class="sublbl">${ed.fw}</p>${tlHTML(ed.fur)}`;
   document.getElementById('pub-h').textContent=d.pub.h;
   const p=d.pub;
   document.getElementById('pub-c').innerHTML=
