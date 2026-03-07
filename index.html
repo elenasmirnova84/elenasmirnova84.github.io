@@ -241,7 +241,7 @@ function render(){
   document.getElementById('h-sub').textContent=d.sub;
   document.getElementById('h-inst').textContent=d.inst;
   const cvBtn=document.getElementById('cv-dl');
-  cvBtn.href=encodeURIComponent(d.dlcv.file);
+  cvBtn.href=d.dlcv.file.replace(/ /g,'%20');
   cvBtn.setAttribute('download',d.dlcv.file);
   document.getElementById('cv-lbl').textContent=d.dlcv.lbl;
   document.getElementById('about-h').textContent=d.about.h;
